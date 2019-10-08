@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/push-siteextension.ps1
+/push-siteextension-myget.ps1
+/nuget.exe

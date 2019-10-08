@@ -13,6 +13,15 @@ namespace WebApplication3.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Index(IndexModel model)
+        {
+            return View(new IndexModel()
+            {
+                Return = model.Input + " " + DateTime.UtcNow.ToLongTimeString()
+            });
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

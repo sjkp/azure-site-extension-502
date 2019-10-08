@@ -1,4 +1,5 @@
-﻿@{
+﻿@model WebApplication3.Controllers.IndexModel
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -29,3 +30,11 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(model => model.Input)
+
+    @Html.DisplayFor(model => model.Return)
+    <input type="submit" value="Next" class="btn btn-primary pull-right" />
+}
